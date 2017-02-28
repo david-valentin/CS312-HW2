@@ -6,7 +6,7 @@ const createSlider = function(){
       };
 
 
-      const block = document.createElement('div');
+      const block = document.createElement('div')
 
       const range = document.createElement('input');
       range.type="range";
@@ -40,11 +40,14 @@ const createColorPicker = function(){
   };
 
   const block = document.createElement("div");
+  block.style.display = "block";
+
 
   const colorBox = document.createElement("div");
   colorBox.style.width="100px";
   colorBox.style.height = "100px";
   colorBox.style.border = " 1px solid black";
+
   block.appendChild(colorBox);
 
 
@@ -65,7 +68,6 @@ const createColorPicker = function(){
         picker.blue = blue.value
         colorBox.style.background = `rgb(${red.value},${green.value},${blue.value})`;
         picker.oninput()
-        
       };
     red.oninput =update;
     green.oninput = update;

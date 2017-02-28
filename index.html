@@ -7,25 +7,6 @@
     <script type="text/javascript" src="showAndHideBtn.js"></script>
   </head>
   <body>
-    
-    <script type="text/javascript">
-        function showColorPicker() {
-           const colorPicker = document.getElementsByTagName('div')[0];
-           console.log(colorPicker);
-           const showAndHideButton = document.getElementById('showAndHideBtn');
-
-           if (colorPicker.style.display === 'block') {
-             colorPicker.style.display = 'none';
-             showAndHideBtn.firstChild.data = "Show Color Picker Button"
-             console.log("Yergh");
-           } else {
-             colorPicker.style.display = 'block';
-             showAndHideBtn.firstChild.data = "Hide Color Picker Button";
-
-             console.log("Nergh");
-           }
-        }
-    </script>
 
     <script type="text/javascript">
       const colorPicker = createColorPicker();
@@ -38,10 +19,29 @@
       Wrote water woman of heart it total other. By in entirely securing suitable graceful at families improved. Zealously few furniture repulsive was agreeable consisted difficult. Collected breakfast estimable questions in to favourite it. Known he place worth words it as to. Spoke now noise off smart her ready.
     </p>
 
-    <button type="button" class="btn btn-default" onclick= "showColorPicker()" id ="showAndHideBtn" style="">
-      Show Color Picker
-    </button>
+    <script type="text/javascript">
+        const showAndHideBtn = createButton();
 
+
+        // function showColorPicker() {
+        //    const colorPicker = document.getElementsByTagName('div')[0];
+        //    console.log(colorPicker);
+        //    const showAndHideButton = document.getElementById('showAndHideBtn');
+        //
+        //    if (colorPicker.style.display === 'block') {
+        //      colorPicker.style.display = 'none';
+        //      showAndHideBtn.firstChild.data = "Show Color Picker Button"
+        //     //  showAndHideBtn.style.color = "blue";
+        //
+        //      console.log("Yergh");
+        //    } else {
+        //      colorPicker.style.display = 'block';
+        //      showAndHideBtn.firstChild.data = "Hide Color Picker Button";
+        //     //  showAndHideBtn.style.color = "red";
+        //      console.log("Nergh");
+        //    }
+        // }
+    </script>
 
 
   </body>
