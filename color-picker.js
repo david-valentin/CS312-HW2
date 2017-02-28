@@ -65,6 +65,7 @@ const createColorPicker = function(){
         picker.blue = blue.value
         colorBox.style.background = `rgb(${red.value},${green.value},${blue.value})`;
         picker.oninput()
+        
       };
     red.oninput =update;
     green.oninput = update;
