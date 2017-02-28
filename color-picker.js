@@ -7,6 +7,7 @@ const createSlider = function(){
 
 
       const block = document.createElement('div')
+      block.align = "center";
 
       const range = document.createElement('input');
       range.type="range";
@@ -17,6 +18,8 @@ const createSlider = function(){
 
       const label = document.createElement('span');
       label.innerHTML = slider.value;
+      label.style.text = 100;
+      label.style.fontFamily =  "Times New Roman";
       block.appendChild(label);
 
       slider.node = block;
@@ -41,12 +44,15 @@ const createColorPicker = function(){
 
   const block = document.createElement("div");
   block.style.display = "block";
+  block.align = "center";
+
 
 
   const colorBox = document.createElement("div");
   colorBox.style.width="100px";
   colorBox.style.height = "100px";
-  colorBox.style.border = " 1px solid black";
+  colorBox.style.border = " 5px solid black";
+  colorBox.style
 
   block.appendChild(colorBox);
 
@@ -103,7 +109,6 @@ const createButton = function(){
         //  console.log(myButton);
         const colorPicker = document.getElementsByTagName('div')[0];
         btn.innerHTML = btnProps['alt_text'];
-        btn.style.color = updateBtnColor();
 
 
          if (colorPicker.style.display == 'block') {
@@ -114,7 +119,6 @@ const createButton = function(){
            colorPicker.style.display = 'block';
           //  console.log(myButton.innerHTML);
           btn.innerHTML = btnProps['text'];
-           btn.style.color = updateBtnColor();
 
            console.log("Nergh");
 
@@ -122,16 +126,8 @@ const createButton = function(){
          return btn;
     }
 
-    const updateBtnColor = function() {
-      const getColorPropsArray = document.getElementsByTagName('input');
-      const red = getColorPropsArray[0].value;
-      const green = getColorPropsArray[1].value;
-      const blue = getColorPropsArray[2].value;
 
-      btn.style.color = `rgb(${red},${green},${blue})`;
-
-      return btn
-    }
+      return btn;
 
     // appends the rest to the document - DOM
 };

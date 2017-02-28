@@ -11,36 +11,32 @@
     <script type="text/javascript">
       const colorPicker = createColorPicker();
       document.body.appendChild(colorPicker.node);
+      colorPicker.oninput = function() {
+
+          const firstPara = document.getElementById("firstPara");
+          const secondPara = document.getElementById("secondPara");
+
+          firstPara.style.color = `rgb(${colorPicker.red},${colorPicker.green},${colorPicker.blue})`;
+
+          secondPara.style.color = `rgb(${colorPicker.red},${colorPicker.green},${colorPicker.blue})`;
+
+
+
+      }
 
     </script>
 
-    <p>
+    <p id= "firstPara">
       Apartments simplicity or understood do it we. Song such eyes had and off. Removed winding ask explain delight out few behaved lasting. Letters old hastily ham sending not sex chamber because present. Oh is indeed twenty entire figure. Occasional diminution announcing new now literature terminated. Really regard excuse off ten pulled. Lady am room head so lady four or eyes an. He do of consulted sometimes concluded mr. An household behaviour if pretended.
+    </p>
+    <p id = "secondPara">
       Wrote water woman of heart it total other. By in entirely securing suitable graceful at families improved. Zealously few furniture repulsive was agreeable consisted difficult. Collected breakfast estimable questions in to favourite it. Known he place worth words it as to. Spoke now noise off smart her ready.
+
     </p>
 
     <script type="text/javascript">
         const showAndHideBtn = createButton();
 
-
-        // function showColorPicker() {
-        //    const colorPicker = document.getElementsByTagName('div')[0];
-        //    console.log(colorPicker);
-        //    const showAndHideButton = document.getElementById('showAndHideBtn');
-        //
-        //    if (colorPicker.style.display === 'block') {
-        //      colorPicker.style.display = 'none';
-        //      showAndHideBtn.firstChild.data = "Show Color Picker Button"
-        //     //  showAndHideBtn.style.color = "blue";
-        //
-        //      console.log("Yergh");
-        //    } else {
-        //      colorPicker.style.display = 'block';
-        //      showAndHideBtn.firstChild.data = "Hide Color Picker Button";
-        //     //  showAndHideBtn.style.color = "red";
-        //      console.log("Nergh");
-        //    }
-        // }
     </script>
 
 
